@@ -11,7 +11,7 @@ ClassMethod PopulateData(
 	#dim res as %Integer
 	if Reset
 	{
-		do ..%KillExtent()
+		do ..%KillExtent(1,1)
 	}
 	set res = ..Populate(Count,1)
 	if (res'=Count)
@@ -19,6 +19,12 @@ ClassMethod PopulateData(
 		set sc = $$$ERROR($$$GeneralError,"Unable to create specified number of records.")
 	}
 	quit sc
+}
+
+ClassMethod TestJES()
+{
+	write !,"Hello World."
+	quit:$quit ""
 }
 
 Property GivenName As %String(COLLATION = "SQLUPPER", POPSPEC = "FirstName()");
