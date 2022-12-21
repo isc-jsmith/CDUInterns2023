@@ -28,7 +28,7 @@ ClassMethod List(
 		set iterator = json.results.%GetIterator()
 		while iterator.%GetNext(.key,.value)
 		{	
-			set Results($increment(Results)) = $listbuild(value.CTLOCCode,value.CTLOCDesc)			
+			set Results($increment(Results)) = $listbuild(value.CTLOCCode,value.CTLOCDesc)
 		}
 	}
 	quit sc
