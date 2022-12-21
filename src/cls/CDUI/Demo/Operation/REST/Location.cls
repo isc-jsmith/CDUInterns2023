@@ -32,7 +32,7 @@ Method getLocationList(
 		set iterator = parameters.%GetIterator()
 		while iterator.%GetNext(.key,.value)
 		{
-			set UrlParams = $select(UrlParams'="":"&",1:"?")_key_"="_value
+			set UrlParams = UrlParams_$select(UrlParams'="":"&",1:"?")_key_"="_value
 		}
 		if '$isobject(..Adapter.%CredentialsObj) 
 		{
@@ -50,8 +50,6 @@ Method getLocationList(
 		{
 			set body = {}.%FromJSON(HttpResponse.Data)
 			$$$LOGINFO("JSON Body : "_body.%ToJSON())
-			#; set Response = ##class(CDUI.Demo.Response.LocationList).%New()
-			#; set sc = Response.%JSONImport(body)	
 			do HttpResponse.Data.Rewind()
 			while 'HttpResponse.Data.AtEnd
 			{
@@ -95,8 +93,6 @@ Method createNewLocation(
 		{
 			set body = {}.%FromJSON(HttpResponse.Data)
 			$$$LOGINFO("JSON Body : "_body.%ToJSON())
-			#; set Response = ##class(CDUI.Demo.Response.LocationList).%New()
-			#; set sc = Response.%JSONImport(body)	
 			do HttpResponse.Data.Rewind()
 			while 'HttpResponse.Data.AtEnd
 			{

@@ -18,6 +18,11 @@ XData ProductionDefinition
   </Item>
   <Item Name="CDUI.Demo.Service.Adaptorless" Category="" ClassName="CDUI.Demo.Service.Adaptorless" PoolSize="0" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
   </Item>
+  <Item Name="CDUI.Demo.Process.MsgRouter.REST" Category="" ClassName="EnsLib.MsgRouter.RoutingEngine" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+    <Setting Target="Host" Name="BusinessRuleName">CDUI.Demo.Process.MsgRouter.RESTRoutingRule</Setting>
+    <Setting Target="Host" Name="ForceSyncSend">1</Setting>
+    <Setting Target="Host" Name="ResponseFrom">CDUI.Demo.Operation.REST.Location</Setting>
+  </Item>
 </Production>
 }
 

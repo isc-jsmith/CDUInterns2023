@@ -10,7 +10,14 @@ XData RuleDefinition [ XMLNamespace = "http://www.intersystems.com/rule" ]
 <ruleSet name="REST" effectiveBegin="" effectiveEnd="">
 <rule name="Location">
 <constraint name="source" value="CDUI.Demo.Service.Adaptorless"></constraint>
-<constraint name="msgClass" value="CDUI.Demo.Request.Location"></constraint>
+<when condition="1">
+<send transform="" target="CDUI.Demo.Operation.REST.Location"></send>
+<return></return>
+</when>
+</rule>
+<rule name="" disabled="true">
+<constraint name="source" value="CDUI.Demo.Service.Adaptorless"></constraint>
+<constraint name="msgClass" value="CDUI.Demo.Request.NewLocation"></constraint>
 <when condition="1">
 <send transform="" target="CDUI.Demo.Operation.REST.Location"></send>
 <return></return>

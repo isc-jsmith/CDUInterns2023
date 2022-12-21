@@ -19,6 +19,8 @@ Property LocationTypeID As %String;
 
 Property Serialised As %RawString(%JSONINCLUDE = "NONE") [ Transient ];
 
+Index ActiveIndex On Active;
+
 Method SerialisedGet() As %RawString
 {
 	do ..%JSONExportToString(.json)
