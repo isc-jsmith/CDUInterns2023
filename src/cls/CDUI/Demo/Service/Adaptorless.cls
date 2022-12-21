@@ -7,7 +7,7 @@ Method OnProcessInput(
 	Output pOutput As %RegisteredObject,
 	ByRef pHint As %String) As %Status
 {
-	set sc = ..SendRequestSync("RoutingRule",.pInput,.pOutput)
+	set sc = ..SendRequestSync("CDUI.Process.MsgRouter.REST",.pInput,.pOutput)
 	quit sc
 }
 
