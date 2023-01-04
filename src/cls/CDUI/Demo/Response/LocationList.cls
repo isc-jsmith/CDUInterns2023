@@ -1,7 +1,7 @@
 Class CDUI.Demo.Response.LocationList Extends (Ens.Response, %JSON.Adaptor)
 {
 
-Property results As array Of CDUI.Demo.Response.Location;
+Property results As list Of CDUI.Demo.Response.Location;
 
 Storage Default
 {

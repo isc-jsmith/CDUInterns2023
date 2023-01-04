@@ -1,4 +1,4 @@
-Class CDUI.Demo.Response.Location Extends %RegisteredObject
+Class CDUI.Demo.Response.Location Extends (%RegisteredObject, %JSON.Adaptor)
 {
 
 Property CTLOCCode As %String;
@@ -9,8 +9,8 @@ Property CTLOCType As %String;
 
 Property HOSPDesc As %String;
 
-Property CTLOCDateActiveFrom As %Date;
+Property CTLOCDateActiveFrom As %String;
 
-Property CTLOCDateActiveTo As %Date;
+Property CTLOCDateActiveTo As %String;
 
 }
