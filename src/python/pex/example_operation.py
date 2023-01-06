@@ -13,4 +13,4 @@ class ExampleOperation(iris.pex.BusinessOperation):
 		self.LOGINFO(file_name)
 		st = self.Adapter.invoke('PutString',file_name,request.get('StringValue'))
 		self.LOGINFO(st)
-		return "hello"
+		return file_name
